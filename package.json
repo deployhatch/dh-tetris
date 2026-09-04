@@ -4,6 +4,7 @@
   "private": true,
   "description": "A focused, arcade-style snake game.",
   "scripts": {
+    "build": "node -e \"console.log('Static client ready')\"",
     "start": "node server.js"
   }
 }
