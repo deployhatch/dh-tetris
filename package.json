@@ -1,0 +1,9 @@
+{
+  "name": "dh-tetris",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node --check server.js",
+    "start": "node server.js"
+  }
+}
