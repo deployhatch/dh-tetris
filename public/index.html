@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102326" />
+    <title>DH Tetris</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">DH</span>
+          <div>
+            <p class="eyebrow">DROP HOUSE / 001</p>
+            <h1>TETRIS</h1>
+          </div>
+        </div>
+        <div class="topbar-status"><span class="status-dot"></span><span id="game-status">READY TO PLAY</span></div>
+      </header>
+
+      <section class="game-layout" aria-label="Tetris game">
+        <aside class="side-panel left-panel">
+          <section class="stat-block score-block">
+            <p class="label">SCORE</p>
+            <strong id="score">000000</strong>
+          </section>
+          <section class="stat-block">
+            <p class="label">LINES</p>
+            <strong id="lines">000</strong>
+          </section>
+          <section class="stat-block">
+            <p class="label">LEVEL</p>
+            <strong id="level">01</strong>
+          </section>
+          <div class="side-rule"></div>
+          <section class="controls">
+            <p class="label">CONTROLS</p>
+            <div class="control-row"><kbd>←</kbd><span>MOVE</span></div>
+            <div class="control-row"><kbd>↓</kbd><span>SOFT DROP</span></div>
+            <div class="control-row"><kbd>↑</kbd><span>ROTATE</span></div>
+            <div class="control-row"><kbd>SPACE</kbd><span>HARD DROP</span></div>
+            <div class="control-row"><kbd>C</kbd><span>HOLD</span></div>
+            <div class="control-row"><kbd>P</kbd><span>PAUSE</span></div>
+          </section>
+        </aside>
+
+        <section class="board-wrap">
+          <div class="board-frame">
+            <div id="board" class="board" role="grid" aria-label="Tetris board"></div>
+            <div id="overlay" class="overlay hidden">
+              <p class="overlay-kicker">RUN COMPLETE</p>
+              <h2 id="overlay-title">GAME OVER</h2>
+              <p id="overlay-copy">Your stack reached the ceiling.</p>
+              <button id="restart-overlay" class="primary-button">PLAY AGAIN</button>
+            </div>
+          </div>
+          <div class="board-caption"><span>10 × 20 MATRIX</span><span id="high-score-label">BEST 000000</span></div>
+        </section>
+
+        <aside class="side-panel right-panel">
+          <section class="preview-section">
+            <p class="label">NEXT UP</p>
+            <div id="next-piece" class="piece-preview" aria-label="Next piece"></div>
+          </section>
+          <section class="preview-section hold-section">
+            <div class="label-line"><p class="label">HOLD</p><span id="hold-state">AVAILABLE</span></div>
+            <div id="hold-piece" class="piece-preview" aria-label="Held piece"></div>
+          </section>
+          <button id="pause-button" class="secondary-button" type="button">PAUSE <span>P</span></button>
+          <button id="restart-button" class="text-button" type="button">RESTART RUN</button>
+        </aside>
+      </section>
+
+      <footer class="footer"><span>STACK CLEAN. THINK FAST.</span><span>BUILT FOR THE DROP.</span></footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

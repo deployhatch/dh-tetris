@@ -1,0 +1,12 @@
+{
+  "name": "dh-tetris",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A browser Tetris game served by Node.js.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
