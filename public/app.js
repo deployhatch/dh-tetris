@@ -126,13 +126,16 @@ function render() {
 }
 
 document.addEventListener('keydown', event => {
+  const gameplayKeys = ['KeyP', 'KeyC', 'ArrowLeft', 'ArrowRight', 'ArrowDown', 'ArrowUp', 'Space'];
+  if (!gameplayKeys.includes(event.code)) return;
+  event.preventDefault();
   if (event.code === 'KeyP') togglePause();
   if (event.code === 'KeyC') holdPiece();
   if (event.code === 'ArrowLeft') movePiece(-1);
   if (event.code === 'ArrowRight') movePiece(1);
   if (event.code === 'ArrowDown') softDrop();
   if (event.code === 'ArrowUp') rotatePiece();
-  if (event.code === 'Space') { event.preventDefault(); hardDrop(); }
+  if (event.code === 'Space') hardDrop();
   render();
 });
 document.querySelector('#pause-button').addEventListener('click', togglePause);
