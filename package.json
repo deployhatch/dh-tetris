@@ -4,6 +4,7 @@
   "private": true,
   "description": "A browser Tetris game served by Node.js.",
   "scripts": {
+    "build": "node --check server.js && node --check public/app.js",
     "start": "node server.js"
   },
   "engines": {
